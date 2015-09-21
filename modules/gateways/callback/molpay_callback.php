@@ -16,6 +16,9 @@ if (!$GATEWAY["type"]) die("Module Not Activated"); # Checks gateway module is a
 
 # Get Returned Variables
 
+$_POST['treq'] = 1;
+$nbcb = $_POST['nbcb'];
+
  $transid = $_POST['tranID'];
  $orderid = $_POST['orderid'];	
  $status = $_POST['status'];
@@ -28,6 +31,30 @@ if (!$GATEWAY["type"]) die("Module Not Activated"); # Checks gateway module is a
  $cust_name = $_POST['cust_name'];
  $cust_email = $_POST['email'];
  $passwd = $GATEWAY['verifykey'];
+ 
+ if($nbcb == 1)
+{
+	echo "CBTOKEN:MPSTATOK";
+}
+else
+{
+	while ( list($k,$v) = each($_POST) ) 
+	{
+	  $postData[]= $k."=".$v;
+	}
+	$postdata =implode("&",$postData);
+	$url	="https://www.onlinepayment.com.my/MOLPay/API/chkstat/returnipn.php";
+	$ch 	=curl_init();
+	curl_setopt($ch, CURLOPT_POST , 1 );
+	curl_setopt($ch, CURLOPT_POSTFIELDS , $postdata );
+	curl_setopt($ch, CURLOPT_URL , $url );
+	curl_setopt($ch, CURLOPT_HEADER , 1 );
+	curl_setopt($ch, CURLINFO_HEADER_OUT , TRUE );
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER , 1 );
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER , FALSE);
+	$result = curl_exec( $ch );
+	curl_close( $ch );
+}
  
   $key0 = md5($tranID.$orderid.$status.$domain.$amount.$currency);
   $key1 = md5($paydate.$domain.$key0.$appcode.$passwd);
