@@ -47,6 +47,14 @@ Installations
   
   `<WHMCS Root Directory>/modules/gateways/callback/molpay_callback.php`
 
+- Tick Enable Return URL with IPN to enable IPN on return URL [Optional]
+
+- In the Callback URL field enter the following URL:
+  
+  `<WHMCS Root Directory>/modules/gateways/callback/molpay_callback.php`
+
+- Tick Enable Callback URL with IPN to enable IPN on callback [Optional]
+
 - Click on "Update"
 
 - You are done! 
