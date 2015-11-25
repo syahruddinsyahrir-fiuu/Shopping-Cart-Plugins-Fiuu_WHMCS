@@ -72,17 +72,14 @@ checkCbTransID($transid); # Checks transaction number isn't already in the datab
 if ($status=="00") {
     # Successful
     addInvoicePayment($invoiceid,$transid,$amount,$fee,$gatewaymodule);
-	  logTransaction($GATEWAY["name"],$_POST,"Successful");
-		echo "<script>
-				      window.location=\"$viewinvoice\";
-				 </script>";
+    logTransaction($GATEWAY["name"],$_POST,"Successful");
+    header('Location: '.$viewinvoice);
+	
 		
 } else {
 	# Unsuccessful
     logTransaction($GATEWAY["name"],$_POST,"Unsuccessful");
-		echo "<script>
-				 			window.location=\"$clientarea\";
-					</script>";
+    header('Location: '.$clientarea);
 }
 
 ?>
