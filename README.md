@@ -1,13 +1,13 @@
-WHCMS Plugin
+WHMCS Plugin
 ===============
 
-MOLPay Plugin for WHCMS Shopping Cart developed by MOLPay R&D team.
+MOLPay Plugin for WHMCS Shopping Cart developed by MOLPay R&D team.
 
 
 Supported version
 -----------------
 
-WHCMS version v6.0.x
+WHMCS version v6.0.x
 
 
 Notes
