@@ -66,11 +66,20 @@ else
 
 $invoiceid = checkCbInvoiceID($orderid,$GATEWAY["name"]); # Checks invoice ID is a valid invoice number or ends processing
 
-checkCbTransID($transid); # Checks transaction number isn't already in the database and ends processing if it does
+//checkCbTransID($transid); # Checks transaction number isn't already in the database and ends processing if it does
 
 
 if ($status=="00") {
     # Successful
+    
+    $checkResult = select_query("tblaccounts", "COUNT(*)", array("transid" => $transid));
+    $checkData = mysql_fetch_array($checkResult);
+	
+    if ($checkData[0]) {
+	header("Location: ".$viewinvoice);
+	exit();
+    }
+    
     addInvoicePayment($invoiceid,$transid,$amount,$fee,$gatewaymodule);
     logTransaction($GATEWAY["name"],$_POST,"Successful");
     header('Location: '.$viewinvoice);
