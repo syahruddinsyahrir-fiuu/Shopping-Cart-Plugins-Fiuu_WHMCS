@@ -30,7 +30,7 @@ $nbcb = $_POST['nbcb'];
  $skey = $_POST['skey'];
  $cust_name = $_POST['cust_name'];
  $cust_email = $_POST['email'];
- $passwd = $GATEWAY['verifykey'];
+ $passwd = $GATEWAY['secretkey'];
  
  if($nbcb == 1)
 {
