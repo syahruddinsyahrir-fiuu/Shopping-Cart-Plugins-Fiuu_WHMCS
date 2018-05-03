@@ -52,6 +52,12 @@ Installations
 
 - Tick Enable Return URL with IPN to enable IPN on return URL [Optional]
 
+- In the Notification URL field enter the following URL:
+  
+  `<WHMCS Root Directory>/modules/gateways/callback/molpay_callback.php`
+
+- Tick Enable Notification URL with IPN to enable IPN on notification [Optional]
+
 - In the Callback URL field enter the following URL:
   
   `<WHMCS Root Directory>/modules/gateways/callback/molpay_callback.php`
