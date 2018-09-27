@@ -62,6 +62,7 @@ $code = '<form action="https://www.onlinepayment.com.my/NBepay/pay/'.$merchantid
 		 <input type=hidden name=country value="'.$country.'">
 		 <input type=hidden name=bill_mobile value="'.$phone.'">
 		 <input type=hidden name=returnurl value="'.$returnurl.'">
+		 <input type=hidden name=callbackurl value="'.$returnurl.'">
 		 <input type=hidden name=vcode value="'.$vkey.'">
 		 <br>
 		 <input src="./images/logo_molpay.gif" name="submit" type="image">
