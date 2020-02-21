@@ -5,7 +5,7 @@ WHMCS Plugin
 
 <img src="https://user-images.githubusercontent.com/38641542/74416400-0d0da580-4e80-11ea-97da-1f0a349b5731.jpg">
 
-Razer Merchant Services Plugin for WHMCS Shopping Cart developed by MOLPay R&D team.
+Razer Merchant Services Plugin for WHMCS Shopping Cart developed by Razer Merchant Services R&D team.
 
 
 Supported version
