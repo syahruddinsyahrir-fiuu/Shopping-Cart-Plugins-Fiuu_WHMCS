@@ -1,6 +1,6 @@
 
 
-WHMCS Plugin
+[Shopping Cart Plugins] – RazerMS WHMCS 
 ===============
 
 <img src="https://user-images.githubusercontent.com/38641542/74416400-0d0da580-4e80-11ea-97da-1f0a349b5731.jpg">
@@ -24,50 +24,7 @@ assistance, please email support-sa@razer.com
 
 Installations
 -------------
-
-- Download this plugin, Extract/Unzip the files. 
-
-- Upload or copy those file and folder into your cart root folder
-
-  `<WHMCS Root Directory>/images/logo_molpay.gif`
-  
-  `<WHMCS Root Directory>/modules/gateways/molpay.php`
-  
-  `<WHMCS Root Directory>/modules/gateways/callback /molpay_callback.php`
-  
-- Login to WHMCS Admin Site.
-
-- Click on Setup > Payments > Payment Gateways. 
-
-- On “Activate Gateway” drop down menu, Choose “MOLPay Online Payment Gateway” and click the [Activate] button.
-
-- Fill in your MOLPay Merchant ID and MOLPay Verify Key. You can have the verify key from MOLPay Merchant Profile
- 
-- Now, access your MOLPay merchant account using the loginID and password provided to you.
-
-- Click on the "Merchant Profile" tab above.
-
-- In the Return URL field enter the following URL:
-  
-  `<WHMCS Root Directory>/modules/gateways/callback/molpay_callback.php`
-
-- Tick Enable Return URL with IPN to enable IPN on return URL [Optional]
-
-- In the Notification URL field enter the following URL:
-  
-  `<WHMCS Root Directory>/modules/gateways/callback/molpay_callback.php`
-
-- Tick Enable Notification URL with IPN to enable IPN on notification [Optional]
-
-- In the Callback URL field enter the following URL:
-  
-  `<WHMCS Root Directory>/modules/gateways/callback/molpay_callback.php`
-
-- Tick Enable Callback URL with IPN to enable IPN on callback [Optional]
-
-- Click on "Update"
-
-- You are done! 
+[Installation Guidance](https://github.com/RazerMS/WHMCS_Plugin/wiki/Installation-Guidance)
 
 
 Contribution
