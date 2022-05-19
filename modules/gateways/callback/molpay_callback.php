@@ -43,7 +43,7 @@ else
 	  $postData[]= $k."=".$v;
 	}
 	$postdata =implode("&",$postData);
-	$url	="https://www.onlinepayment.com.my/MOLPay/API/chkstat/returnipn.php";
+	$url	="https://www.pay.merchant.razer.com/RMS/API/chkstat/returnipn.php";
 	$ch 	=curl_init();
 	curl_setopt($ch, CURLOPT_POST , 1 );
 	curl_setopt($ch, CURLOPT_POSTFIELDS , $postdata );

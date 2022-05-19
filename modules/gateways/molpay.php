@@ -51,7 +51,7 @@ global $CONFIG;
 	# System Variables	
 	# Enter your code submit to the gateway...
 
-$code = '<form action="https://www.onlinepayment.com.my/NBepay/pay/'.$merchantid.'/" method="post" />
+$code = '<form action="https://pay.merchant.razer.com/RMS/pay/'.$merchantid.'/" method="post" />
 		 <input type=hidden name=instID value="'.$merchantid.'">
 		 <input type=hidden name=orderid value="'.$invoiceid.'">
 		 <input type=hidden name=amount value="'.$amount.'">
