@@ -2,10 +2,10 @@
 
 function molpay_config() {
     $configarray = array(
-     "FriendlyName" => array("Type" => "System", "Value"=>"MOLPay Malaysia Online Payment"),
-     "merchantid" => array("FriendlyName" => "MOLPay Merchant ID", "Type" => "text", "Size" => "20", ),
-     "verifykey" => array("FriendlyName" => "MOLPay Verify Key", "Type" => "text", "Size" => "20", ),
-     "secretkey" => array("FriendlyName" => "MOLPay Secret Key", "Type" => "text", "Size" => "20", )
+     "FriendlyName" => array("Type" => "System", "Value"=>"RazerMS Online Payment"),
+     "merchantid" => array("FriendlyName" => "RazerMS Merchant ID", "Type" => "text", "Size" => "20", ),
+     "verifykey" => array("FriendlyName" => "RazerMS Verify Key", "Type" => "text", "Size" => "20", ),
+     "secretkey" => array("FriendlyName" => "RazerMS Secret Key", "Type" => "text", "Size" => "20", )
 	    
     );
 	return $configarray;
