@@ -11,7 +11,7 @@ Razer Merchant Services Plugin for WHMCS Shopping Cart developed by Razer Mercha
 Supported version
 -----------------
 
-WHMCS version v6.0.x
+WHMCS version v8.0.x
 
 
 Notes
