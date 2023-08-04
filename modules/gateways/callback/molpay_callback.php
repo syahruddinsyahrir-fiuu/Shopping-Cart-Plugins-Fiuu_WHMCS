@@ -31,6 +31,14 @@ $nbcb = $_POST['nbcb'];
  $cust_name = $_POST['cust_name'];
  $cust_email = $_POST['email'];
  $passwd = $GATEWAY['secretkey'];
+
+// Check if the current $skey is the same as the one stored in the session
+session_start();
+if (isset($_SESSION['prev_skey']) && $_SESSION['prev_skey'] === $skey) {
+    die("Duplicate response. Request terminated.");
+} else {
+    $_SESSION['prev_skey'] = $skey;
+}
  
  if($nbcb == 1)
 {
@@ -43,7 +51,7 @@ else
 	  $postData[]= $k."=".$v;
 	}
 	$postdata =implode("&",$postData);
-	$url	="https://www.pay.merchant.razer.com/RMS/API/chkstat/returnipn.php";
+	$url	="https://pay.merchant.razer.com/RMS/API/chkstat/returnipn.php";
 	$ch 	=curl_init();
 	curl_setopt($ch, CURLOPT_POST , 1 );
 	curl_setopt($ch, CURLOPT_POSTFIELDS , $postdata );
