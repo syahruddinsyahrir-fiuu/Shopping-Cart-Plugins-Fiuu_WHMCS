@@ -46,9 +46,9 @@ if (isset($_SESSION['prev_skey']) && $_SESSION['prev_skey'] === $skey) {
 }
 else
 {
-	while ( list($k,$v) = each($_POST) ) 
+	foreach ($_POST as $k => $v) 
 	{
-	  $postData[]= $k."=".$v;
+	    $postData[] = $k . "=" . $v;
 	}
 	$postdata =implode("&",$postData);
 	$url	="https://pay.merchant.razer.com/RMS/API/chkstat/returnipn.php";
