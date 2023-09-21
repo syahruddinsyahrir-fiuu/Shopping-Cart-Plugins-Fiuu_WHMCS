@@ -1,6 +1,6 @@
 <?php
 
-function molpay_config() {
+function rms_config() {
     $configarray = array(
      "FriendlyName" => array("Type" => "System", "Value"=>"RazerMS Online Payment"),
      "merchantid" => array("FriendlyName" => "RazerMS Merchant ID", "Type" => "text", "Size" => "20", ),
@@ -11,7 +11,7 @@ function molpay_config() {
 	return $configarray;
 }
 
-function molpay_link($params) {
+function rms_link($params) {
 global $CONFIG;
 
 	# Gateway Specific Variables
@@ -43,7 +43,7 @@ global $CONFIG;
 	$country = $params['clientdetails']['country'];
 	$address = $address1." ".$address2." ".$city." ".$city." ".$state." ".$postcode." ".$country;
 	$bill_desc = $description." ".$desc;
-	$returnurl = $CONFIG['SystemURL']."/modules/gateways/callback/molpay_callback.php";
+	$returnurl = $CONFIG['SystemURL']."/modules/gateways/callback/rms_callback.php";
 	$phone = $params['clientdetails']['phonenumber'];
 	
 	$vkey = md5($amount.$merchantid.$invoiceid.$verifykey);
@@ -65,7 +65,7 @@ $code = '<form action="https://pay.merchant.razer.com/RMS/pay/'.$merchantid.'/" 
 		 <input type=hidden name=callbackurl value="'.$returnurl.'">
 		 <input type=hidden name=vcode value="'.$vkey.'">
 		 <br>
-		 <input src="./images/logo_molpay.gif" name="submit" type="image">
+		 <input src="./images/logo_rms.gif" name="submit" type="image">
 		 </form>';
 		 
 	return $code;

@@ -9,7 +9,7 @@ include("../../../includes/invoicefunctions.php");
 
 global $CONFIG;
 
-$gatewaymodule = "molpay"; # Enter your gateway module name here replacing template
+$gatewaymodule = "rms"; # Enter your gateway module name here replacing template
 
 $GATEWAY = getGatewayVariables($gatewaymodule);
 if (!$GATEWAY["type"]) die("Module Not Activated"); # Checks gateway module is active before accepting callback
