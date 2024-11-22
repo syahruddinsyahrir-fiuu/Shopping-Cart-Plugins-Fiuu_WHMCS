@@ -2,10 +2,10 @@
 
 function rms_config() {
     $configarray = array(
-     "FriendlyName" => array("Type" => "System", "Value"=>"RazerMS Online Payment"),
-     "merchantid" => array("FriendlyName" => "RazerMS Merchant ID", "Type" => "text", "Size" => "20", ),
-     "verifykey" => array("FriendlyName" => "RazerMS Verify Key", "Type" => "text", "Size" => "20", ),
-     "secretkey" => array("FriendlyName" => "RazerMS Secret Key", "Type" => "text", "Size" => "20", )
+     "FriendlyName" => array("Type" => "System", "Value"=>"Fiuu Online Payment"),
+     "merchantid" => array("FriendlyName" => "Fiuu Merchant ID", "Type" => "text", "Size" => "20", ),
+     "verifykey" => array("FriendlyName" => "Fiuu Verify Key", "Type" => "text", "Size" => "20", ),
+     "secretkey" => array("FriendlyName" => "Fiuu Secret Key", "Type" => "text", "Size" => "20", )
 	    
     );
 	return $configarray;
@@ -43,7 +43,8 @@ global $CONFIG;
 	$country = $params['clientdetails']['country'];
 	$address = $address1." ".$address2." ".$city." ".$city." ".$state." ".$postcode." ".$country;
 	$bill_desc = $description." ".$desc;
-	$returnurl = $CONFIG['SystemURL']."/modules/gateways/callback/rms_callback.php";
+	$returnurl = $CONFIG['SystemURL']."/modules/gateways/return/fiuu_return.php";
+	$callbackurl = $CONFIG['SystemURL']."/modules/gateways/callback/rms_callback.php";
 	$phone = $params['clientdetails']['phonenumber'];
 	
 	$vkey = md5($amount.$merchantid.$invoiceid.$verifykey);
@@ -51,7 +52,7 @@ global $CONFIG;
 	# System Variables	
 	# Enter your code submit to the gateway...
 
-$code = '<form action="https://pay.merchant.razer.com/RMS/pay/'.$merchantid.'/" method="post" />
+$code = '<form action="https://pay.fiuu.com/RMS/pay/'.$merchantid.'/" method="post" />
 		 <input type=hidden name=instID value="'.$merchantid.'">
 		 <input type=hidden name=orderid value="'.$invoiceid.'">
 		 <input type=hidden name=amount value="'.$amount.'">
@@ -62,7 +63,7 @@ $code = '<form action="https://pay.merchant.razer.com/RMS/pay/'.$merchantid.'/" 
 		 <input type=hidden name=country value="'.$country.'">
 		 <input type=hidden name=bill_mobile value="'.$phone.'">
 		 <input type=hidden name=returnurl value="'.$returnurl.'">
-		 <input type=hidden name=callbackurl value="'.$returnurl.'">
+		 <input type=hidden name=callbackurl value="'.$callbackurl.'">
 		 <input type=hidden name=vcode value="'.$vkey.'">
 		 <br>
 		 <input src="./images/logo_rms.gif" name="submit" type="image">

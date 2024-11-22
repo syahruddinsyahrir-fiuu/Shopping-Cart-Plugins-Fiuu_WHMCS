@@ -51,7 +51,7 @@ else
 	    $postData[] = $k . "=" . $v;
 	}
 	$postdata =implode("&",$postData);
-	$url	="https://pay.merchant.razer.com/RMS/API/chkstat/returnipn.php";
+	$url	="https://pay.fiuu.com/RMS/API/chkstat/returnipn.php";
 	$ch 	=curl_init();
 	curl_setopt($ch, CURLOPT_POST , 1 );
 	curl_setopt($ch, CURLOPT_POSTFIELDS , $postdata );
