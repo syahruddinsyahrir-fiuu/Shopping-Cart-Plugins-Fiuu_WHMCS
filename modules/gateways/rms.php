@@ -44,7 +44,7 @@ global $CONFIG;
 	$address = $address1." ".$address2." ".$city." ".$city." ".$state." ".$postcode." ".$country;
 	$bill_desc = $description." ".$desc;
 	$returnurl = $CONFIG['SystemURL']."/modules/gateways/return/fiuu_return.php";
-	$callbackurl = $CONFIG['SystemURL']."/modules/gateways/callback/rms_callback.php";
+	$callbackurl = $CONFIG['SystemURL']."/modules/gateways/callback/fiuu_callback.php";
 	$phone = $params['clientdetails']['phonenumber'];
 	
 	$vkey = md5($amount.$merchantid.$invoiceid.$verifykey);
