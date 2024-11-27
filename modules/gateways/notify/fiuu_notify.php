@@ -40,9 +40,9 @@ if (isset($_SESSION['prev_skey']) && $_SESSION['prev_skey'] === $skey) {
     $_SESSION['prev_skey'] = $skey;
 }
  
- if($nbcb == 1)
+ if($nbcb == 2)
 {
-	echo "CBTOKEN:MPSTATOK";
+	$_POST['treq'] = 1; 
 }
 else
 {
