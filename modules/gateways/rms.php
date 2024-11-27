@@ -64,8 +64,7 @@ $code = '<form action="https://pay.fiuu.com/RMS/pay/'.$merchantid.'/" method="po
 		 <input type=hidden name=country value="'.$country.'">
 		 <input type=hidden name=bill_mobile value="'.$phone.'">
 		 <input type=hidden name=returnurl value="'.$returnurl.'">
-		 <input type=hidden name=callbackurl value="'.$callbackurl.'">
-		 <input type=hidden name=notifyurl value="'.$notifyurl.'">
+		 <input type=hidden name=callbackurl value="'.$notifyurl.'">
 		 <input type=hidden name=vcode value="'.$vkey.'">
 		 <br>
 		 <input src="./images/logo_rms.gif" name="submit" type="image">
